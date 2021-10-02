@@ -247,7 +247,7 @@ class _BarChartRace(CommonChart):
         #load image as an OffsetImage object
         img_name      = get_image_name(name)
         img           = get_image_label(self.img_label_folder,img_name)
-        im            = OffsetImage(img,zoom=.25) # change zoom value based on icon image's size
+        im            = OffsetImage(img,zoom=.42) # change zoom value based on icon image's size
         im.image.axes = ax 
 
         #renderer = self.fig.canvas.renderer
@@ -261,7 +261,7 @@ class _BarChartRace(CommonChart):
                 #len_bar = (img_width/2) + 2 if length < img_width else length - (img_width/2) - 2
                 len_bar = length
                 # xybox_val = (-38,0) if length < 30 else (-38,0)
-                xybox_val = (38,0)
+                xybox_val = (-45,0)
                 ab = AnnotationBbox(im,(len_bar,location,),xybox=xybox_val,frameon=False,xycoords='data',
                                     boxcoords='offset points',pad=0)
             else:
